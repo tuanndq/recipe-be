@@ -1,0 +1,69 @@
+[
+  {
+    "title": "Spaghetti Carbonara",
+    "description": "Classic Roman pasta with eggs, cheese, and pancetta.",
+    "imageUrl": null,
+    "cuisineSlug": "italian",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 20,
+    "servings": 4,
+    "ingredients": [
+      { "slug": "spaghetti", "quantity": "400g" },
+      { "slug": "eggs", "quantity": "4 large" },
+      { "slug": "parmesan-cheese", "quantity": "100g grated" },
+      { "slug": "pancetta", "quantity": "150g" },
+      { "slug": "black-pepper", "quantity": "to taste" },
+      { "slug": "salt", "quantity": "for pasta water" }
+    ],
+    "steps": [
+      { "stepNumber": 1, "instruction": "Cook spaghetti in salted boiling water until al dente." },
+      { "stepNumber": 2, "instruction": "Fry pancetta in a pan until crispy." },
+      { "stepNumber": 3, "instruction": "Whisk eggs with grated Parmesan and black pepper." },
+      { "stepNumber": 4, "instruction": "Drain pasta, toss with pancetta off heat, then mix in egg mixture quickly." },
+      { "stepNumber": 5, "instruction": "Serve immediately with extra Parmesan and pepper." }
+    ]
+  },
+  {
+    "title": "Chicken Teriyaki Bowl",
+    "description": "Quick Japanese-style chicken over steamed rice.",
+    "imageUrl": null,
+    "cuisineSlug": "japanese",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 15,
+    "servings": 2,
+    "ingredients": [
+      { "slug": "chicken-breast", "quantity": "2 pieces" },
+      { "slug": "soy-sauce", "quantity": "3 tbsp" },
+      { "slug": "rice", "quantity": "2 cups cooked" },
+      { "slug": "garlic", "quantity": "2 cloves minced" },
+      { "slug": "olive-oil", "quantity": "1 tbsp" }
+    ],
+    "steps": [
+      { "stepNumber": 1, "instruction": "Slice chicken and season lightly with salt." },
+      { "stepNumber": 2, "instruction": "Sauté garlic in oil, add chicken and cook until golden." },
+      { "stepNumber": 3, "instruction": "Add soy sauce and simmer until glazed." },
+      { "stepNumber": 4, "instruction": "Serve over warm rice." }
+    ]
+  },
+  {
+    "title": "Guacamole",
+    "description": "Fresh Mexican avocado dip with lime and tomato.",
+    "imageUrl": null,
+    "cuisineSlug": "mexican",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 0,
+    "servings": 4,
+    "ingredients": [
+      { "slug": "avocado", "quantity": "3 ripe" },
+      { "slug": "lime", "quantity": "1 juiced" },
+      { "slug": "tomato", "quantity": "1 diced" },
+      { "slug": "onion", "quantity": "1/4 cup finely chopped" },
+      { "slug": "salt", "quantity": "to taste" }
+    ],
+    "steps": [
+      { "stepNumber": 1, "instruction": "Mash avocados in a bowl." },
+      { "stepNumber": 2, "instruction": "Stir in lime juice, tomato, and onion." },
+      { "stepNumber": 3, "instruction": "Season with salt and serve immediately." }
+    ]
+  }
+]

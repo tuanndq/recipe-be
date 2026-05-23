@@ -1,0 +1,17 @@
+[
+  { "name": "Spaghetti", "slug": "spaghetti" },
+  { "name": "Eggs", "slug": "eggs" },
+  { "name": "Parmesan cheese", "slug": "parmesan-cheese" },
+  { "name": "Pancetta", "slug": "pancetta" },
+  { "name": "Black pepper", "slug": "black-pepper" },
+  { "name": "Chicken breast", "slug": "chicken-breast" },
+  { "name": "Soy sauce", "slug": "soy-sauce" },
+  { "name": "Rice", "slug": "rice" },
+  { "name": "Avocado", "slug": "avocado" },
+  { "name": "Lime", "slug": "lime" },
+  { "name": "Tomato", "slug": "tomato" },
+  { "name": "Onion", "slug": "onion" },
+  { "name": "Garlic", "slug": "garlic" },
+  { "name": "Olive oil", "slug": "olive-oil" },
+  { "name": "Salt", "slug": "salt" }
+]

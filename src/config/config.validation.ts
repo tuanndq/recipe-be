@@ -1,0 +1,47 @@
+import * as Joi from 'joi';
+
+export const configValidationSchema = Joi.object({
+  NODE_ENV: Joi.string()
+    .valid('development', 'production', 'test')
+    .default('development'),
+  PORT: Joi.number().default(3000),
+  APP_URL: Joi.string().uri().default('http://localhost:3000'),
+  DB_HOST: Joi.string().required(),
+  DB_PORT: Joi.number().default(3306),
+  DB_USERNAME: Joi.string().required(),
+  DB_PASSWORD: Joi.string().required(),
+  DB_DATABASE: Joi.string().required(),
+  JWT_SECRET: Joi.string().required(),
+  JWT_EXPIRES_IN: Joi.string().default('24h'),
+  ADMIN_USERNAME: Joi.string().required(),
+  ADMIN_PASSWORD: Joi.string().required(),
+  UPLOAD_DIR: Joi.string().default('uploads'),
+  MAX_FILE_SIZE_MB: Joi.number().default(5),
+  STORAGE_DRIVER: Joi.string().valid('local', 's3').default('local'),
+  IMAGE_CONVERT_TO_WEBP: Joi.string().valid('true', 'false').default('true'),
+  WEBP_QUALITY: Joi.number().min(1).max(100).default(80),
+  AWS_REGION: Joi.string().when('STORAGE_DRIVER', {
+    is: 's3',
+    then: Joi.required(),
+    otherwise: Joi.optional(),
+  }),
+  S3_BUCKET: Joi.string().when('STORAGE_DRIVER', {
+    is: 's3',
+    then: Joi.required(),
+    otherwise: Joi.optional(),
+  }),
+  S3_PREFIX: Joi.string().default('recipes'),
+  S3_PUBLIC_BASE_URL: Joi.string().uri().allow('').optional(),
+  AWS_ACCESS_KEY_ID: Joi.string().optional(),
+  AWS_SECRET_ACCESS_KEY: Joi.string().optional(),
+  DB_SYNC: Joi.string().valid('true', 'false').optional(),
+  REDIS_HOST: Joi.string().default('localhost'),
+  REDIS_PORT: Joi.number().default(6379),
+  REDIS_PASSWORD: Joi.string().allow('').optional(),
+  CACHE_ENABLED: Joi.string().valid('true', 'false').default('true'),
+  CACHE_TTL_SECONDS: Joi.number().default(300),
+  CACHE_KEY_PREFIX: Joi.string().default('recipe-api'),
+  THROTTLE_ENABLED: Joi.string().valid('true', 'false').default('true'),
+  THROTTLE_TTL_MS: Joi.number().default(60_000),
+  THROTTLE_LIMIT: Joi.number().default(100),
+});
