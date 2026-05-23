@@ -54,7 +54,7 @@ docker compose up mysql redis -d
 npm install
 npm run start:dev
 
-# In another terminal, seed data
+# In another terminal, seed data (run migrations first: npm run migration:run)
 npm run seed
 ```
 

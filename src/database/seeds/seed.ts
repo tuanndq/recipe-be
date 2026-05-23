@@ -24,7 +24,7 @@ const dataSource = new DataSource({
     RecipeIngredient,
     InstructionStep,
   ],
-  synchronize: true,
+  synchronize: false,
 });
 
 interface SeedRecipe {
