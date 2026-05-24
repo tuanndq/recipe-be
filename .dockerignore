@@ -1,0 +1,18 @@
+node_modules
+dist
+coverage
+.git
+.env
+.env.*
+!.env.example
+# Uploaded files at repo root only — do not ignore src/uploads/ (NestJS module)
+/uploads
+*.log
+.DS_Store
+test
+.cursor
+deploy
+README.md
+*.md
+!package.json
+!package-lock.json
