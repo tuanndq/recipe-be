@@ -1,6 +1,7 @@
 node_modules
 dist
-uploads
+# User-uploaded files at repo root only (not src/uploads NestJS module)
+/uploads
 .env
 coverage
 *.log
