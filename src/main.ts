@@ -22,12 +22,14 @@ async function bootstrap() {
   );
   app.useGlobalFilters(new HttpExceptionFilter());
 
+  const appUrl = process.env.APP_URL ?? `http://localhost:${process.env.PORT ?? 3000}`;
   const config = new DocumentBuilder()
     .setTitle('Cooking Recipe API')
     .setDescription(
       'Search and browse cooking recipes by ingredients and cuisine. Admin endpoints require JWT.',
     )
     .setVersion('1.0')
+    .addServer(appUrl)
     .addBearerAuth()
     .build();
 
