@@ -10,6 +10,7 @@ async function bootstrap() {
   mkdirSync(uploadDir, { recursive: true });
 
   const app = await NestFactory.create(AppModule);
+  app.enableCors();
 
   app.useGlobalPipes(
     new ValidationPipe({
