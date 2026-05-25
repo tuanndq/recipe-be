@@ -21,11 +21,20 @@ export class RedisCacheInvalidator implements CacheInvalidator {
   async deleteByPattern(pattern: string): Promise<void> {
     try {
       const fullPattern = this.prefix(pattern);
-      const keys = await this.redis.keys(fullPattern);
-      if (keys.length > 0) {
-        await this.redis.del(keys);
+      const patterns = [fullPattern, `keyv:${fullPattern}`];
+
+      let total = 0;
+      for (const p of patterns) {
+        const keys = await this.redis.keys(p);
+        if (keys.length > 0) {
+          await this.redis.del(keys);
+          total += keys.length;
+        }
+      }
+
+      if (total > 0) {
         this.logger.debug(
-          `Invalidated ${keys.length} cache key(s): ${fullPattern}`,
+          `Invalidated ${total} cache key(s) for pattern: ${fullPattern}`,
         );
       }
     } catch (error) {
